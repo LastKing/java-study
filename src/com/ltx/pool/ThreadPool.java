@@ -129,6 +129,7 @@ public final class ThreadPool {
             Runnable r = null;
             while (isRunning) {
                 synchronized (taskQueue) {
+                    //手动停止flag  /  任务队列不为空
                     while (isRunning && taskQueue.isEmpty()) {
                         try {
                             taskQueue.wait(20);
@@ -136,14 +137,18 @@ public final class ThreadPool {
                             e.printStackTrace();
                         }
                     }
+                    //如果 任务队列不为空  取出并删除 任务
                     if (!taskQueue.isEmpty())
                         r = taskQueue.remove(0);
                 }
 
+                //执行任务
                 if (r != null) {
                     r.run();
                 }
+                //记录已经完成的任务数
                 finished_task++;
+                //清空任务
                 r = null;
             }
         }
