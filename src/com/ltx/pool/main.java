@@ -7,8 +7,10 @@ package com.ltx.pool;
 public class main {
     public static void main(String[] args) {
         ThreadPool t = ThreadPool.getThreadPool(3);
+
         t.execute(new Runnable[]{new Task(), new Task(), new Task()});
         t.execute(new Runnable[]{new Task(), new Task(), new Task()});
+
         System.out.println(t);
         t.destroy();
         System.out.println(t);

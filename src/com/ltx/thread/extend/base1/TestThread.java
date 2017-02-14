@@ -1,6 +1,7 @@
 package com.ltx.thread.extend.base1;
 
 /**
+ * 基本的只需要 重写 run 就行了，其他的可以通过继承
  * Created by toonew on 2017/2/13.
  */
 public class TestThread extends Thread {

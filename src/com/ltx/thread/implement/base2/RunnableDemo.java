@@ -1,6 +1,7 @@
-package com.ltx.thread.implement;
+package com.ltx.thread.implement.base2;
 
 /**
+ * 实现run 并且自建一个 线程执行
  * Created by toonew on 2017/1/18.
  */
 public class RunnableDemo implements Runnable {
