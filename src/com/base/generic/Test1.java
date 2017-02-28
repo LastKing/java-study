@@ -1,4 +1,4 @@
-package com.ltx.generics;
+package com.base.generic;
 
 /**
  * Created by toonew on 2017/1/18.

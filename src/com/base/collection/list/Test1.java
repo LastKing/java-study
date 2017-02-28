@@ -1,4 +1,4 @@
-package com.ltx.collection.list;
+package com.base.collection.list;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

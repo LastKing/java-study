@@ -1,4 +1,4 @@
-package com.ltx.collection.queue;
+package com.base.collection.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;

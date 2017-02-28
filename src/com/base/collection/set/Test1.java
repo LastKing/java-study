@@ -1,4 +1,4 @@
-package com.ltx.collection.set;
+package com.base.collection.set;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;

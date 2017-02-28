@@ -1,4 +1,4 @@
-package com.ltx.collection.map;
+package com.base.collection.map;
 
 import java.util.HashMap;
 import java.util.Hashtable;
