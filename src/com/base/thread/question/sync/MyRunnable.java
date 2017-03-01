@@ -1,7 +1,7 @@
-package com.ltx.thread.question.sync;
+package com.base.thread.question.sync;
 
 /**
- * 0.0
+ * 如何 解释  这里的输出允许问题
  * Created by toonew on 2017/2/14.
  */
 public class MyRunnable implements Runnable {

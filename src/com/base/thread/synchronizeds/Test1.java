@@ -1,4 +1,4 @@
-package com.ltx.thread.synchronizeds;
+package com.base.thread.synchronizeds;
 
 /**
  * Created by Rain on 2017/2/14.

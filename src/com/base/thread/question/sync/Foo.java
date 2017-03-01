@@ -1,4 +1,4 @@
-package com.ltx.thread.question.sync;
+package com.base.thread.question.sync;
 
 /**
  * 0.0

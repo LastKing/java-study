@@ -1,4 +1,4 @@
-package com.ltx.thread.synchronizeds;
+package com.base.thread.synchronizeds;
 
 /**
  * http://www.imooc.com/video/6818

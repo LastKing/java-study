@@ -1,26 +1,26 @@
-package com.ltx.thread.implement.base2;
+package com.base.thread.extend.base2;
 
 /**
- * 实现run 并且自建一个 线程执行
+ * 继承 线程，重写run 方法，start时创建线程，进入准备状态
+ *
  * Created by toonew on 2017/1/18.
  */
-public class RunnableDemo implements Runnable {
-
+public class ThreadDemo extends Thread {
     private Thread t;
     private String threadName;
 
-    public RunnableDemo(String threadName) {
-        this.threadName = threadName;
-        System.out.println("Creating " + threadName);
+
+    public ThreadDemo(String name) {
+        this.threadName = name;
     }
 
     @Override
     public void run() {
-        System.out.println("Running" + threadName);
+        System.out.println("Running " + threadName);
         try {
             for (int i = 4; i > 0; i--) {
                 System.out.println("Thread: " + threadName + ", " + i);
-                // 让线程睡眠一会
+                // 让线程睡醒一会
                 Thread.sleep(50);
             }
         } catch (InterruptedException e) {
@@ -29,13 +29,12 @@ public class RunnableDemo implements Runnable {
         System.out.println("Thread " + threadName + " exiting.");
     }
 
-    public void start() {
+    @Override
+    public synchronized void start() {
         System.out.println("Staring" + threadName);
         if (t == null) {
             t = new Thread(this, threadName);
             t.start();
         }
     }
-
-
 }

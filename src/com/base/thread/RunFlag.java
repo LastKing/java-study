@@ -1,4 +1,4 @@
-package com.ltx.thread;
+package com.base.thread;
 
 /**
  * 这里需要什么 jvm -server 才能出现，

@@ -1,4 +1,4 @@
-package com.ltx.thread;
+package com.base.thread;
 
 /**
  * Created by Rain on 2017/2/16.

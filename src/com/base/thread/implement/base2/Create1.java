@@ -1,4 +1,4 @@
-package com.ltx.thread.implement.base2;
+package com.base.thread.implement.base2;
 
 /**
  * Created by toonew on 2017/1/18.

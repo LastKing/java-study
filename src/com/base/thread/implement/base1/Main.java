@@ -1,4 +1,4 @@
-package com.ltx.thread.implement.base1;
+package com.base.thread.implement.base1;
 
 /**
  * 0.0

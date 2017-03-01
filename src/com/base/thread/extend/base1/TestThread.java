@@ -1,4 +1,4 @@
-package com.ltx.thread.extend.base1;
+package com.base.thread.extend.base1;
 
 /**
  * 基本的只需要 重写 run 就行了，其他的可以通过继承
