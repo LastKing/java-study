@@ -1,4 +1,4 @@
-package com.base.reflection;
+package com.base.reflection.base1;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ public class TestReflect2 implements Serializable {
     private static final long serialVersionUID = -2862585049955236662L;
 
     public static void main(String[] args) throws Exception {
-        Class<?> clazz = Class.forName("com.base.reflection.TestReflect2");
+        Class<?> clazz = Class.forName("com.base.reflection.base1.TestReflect2");
         //取得父类
         Class<?> parentClass = clazz.getSuperclass();
         System.out.println("clazz的父类为： " + parentClass.getName());

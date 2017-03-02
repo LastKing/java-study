@@ -1,4 +1,4 @@
-package com.base.reflection;
+package com.base.reflection.base1;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -12,7 +12,7 @@ public class TestReflect4 implements Serializable {
     private static final long serialVersionUID = -2862585049955236662L;
 
     public static void main(String[] args) throws Exception {
-        Class<?> clazz = Class.forName("com.base.reflection.TestReflect4");
+        Class<?> clazz = Class.forName("com.base.reflection.base1.TestReflect4");
 
         System.out.println("=================本类属性==================");
 

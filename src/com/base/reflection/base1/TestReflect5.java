@@ -1,4 +1,4 @@
-package com.base.reflection;
+package com.base.reflection.base1;
 
 import java.lang.reflect.Method;
 
@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 public class TestReflect5 {
 
     public static void main(String[] args) throws Exception {
-        Class<?> clazz = Class.forName("com.base.reflection.TestReflect5");
+        Class<?> clazz = Class.forName("com.base.reflection.base1.TestReflect5");
         // 调用TestReflect类中的reflect1方法
         Method method = clazz.getMethod("reflect1");
         method.invoke(clazz.newInstance());

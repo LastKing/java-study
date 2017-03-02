@@ -1,4 +1,4 @@
-package com.base.reflection;
+package com.base.reflection.base1;
 
 /**
  * 将反射机制应用于工厂模式
@@ -44,8 +44,8 @@ class Factory {
  **/
 public class TestReflect11 {
     public static void main(String[] args) {
-        Fruit f = Factory.getInstance("com.base.reflection.Apple");
-        Fruit f2 = Factory.getInstance("com.base.reflection.Orange");
+        Fruit f = Factory.getInstance("com.base.reflection.base1.Apple");
+        Fruit f2 = Factory.getInstance("com.base.reflection.base1.Orange");
         f.eat();
         f2.eat();
     }

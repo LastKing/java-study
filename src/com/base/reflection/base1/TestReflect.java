@@ -1,6 +1,7 @@
-package com.base.reflection;
+package com.base.reflection.base1;
 
 /**
+ * 出处：http://www.cnblogs.com/lzq198754/p/5780331.html
  * Created by Rain on 2017/2/27.
  */
 public class TestReflect {
@@ -10,7 +11,7 @@ public class TestReflect {
         Class<?> class2 = null;
         Class<?> class3 = null;
 
-        class1 = Class.forName("com.base.reflection.TestReflect");
+        class1 = Class.forName("com.base.reflection.base1.TestReflect");
         class2 = new TestReflect().getClass();
         class3 = TestReflect.class;
 

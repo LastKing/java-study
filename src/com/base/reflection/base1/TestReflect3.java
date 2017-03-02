@@ -1,4 +1,4 @@
-package com.base.reflection;
+package com.base.reflection.base1;
 
 import java.lang.reflect.Constructor;
 
@@ -11,7 +11,7 @@ public class TestReflect3 {
 
     public static void main(String[] args) throws Exception {
         Class<?> class1 = null;
-        class1 = Class.forName("com.base.reflection.User");
+        class1 = Class.forName("com.base.reflection.base1.User");
 
         // 第一种方法，实例化默认构造方法，调用set赋值
         User user = (User) class1.newInstance();

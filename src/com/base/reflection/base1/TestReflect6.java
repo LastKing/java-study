@@ -1,4 +1,4 @@
-package com.base.reflection;
+package com.base.reflection.base1;
 
 import java.lang.reflect.Field;
 
@@ -10,7 +10,7 @@ public class TestReflect6 {
     private String proprety = "test";
 
     public static void main(String[] args) throws Exception {
-        Class<?> clazz = Class.forName("com.base.reflection.TestReflect6");
+        Class<?> clazz = Class.forName("com.base.reflection.base1.TestReflect6");
 
         Object obj = clazz.newInstance();
 
