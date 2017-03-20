@@ -17,16 +17,16 @@ public class Test1 {
     public static void main(String[] args) {
         Integer[] intArray = {1, 2, 3, 4, 5};
         Double[] doubleArray = {1.1, 2.2, 3.3, 4.4, 5.5};
-        Character[] charArray = {'H', 'E', 'L', 'L', 'O'} ;
+        Character[] charArray = {'H', 'E', 'L', 'L', 'O'};
 
-        System.out.println( "整型数组元素为:" );
-        printArray( intArray  ); // 传递一个整型数组
+        System.out.println("整型数组元素为:");
+        printArray(intArray); // 传递一个整型数组
 
-        System.out.println( "\n双精度型数组元素为:" );
-        printArray( doubleArray ); // 传递一个双精度型数组
+        System.out.println("\n双精度型数组元素为:");
+        printArray(doubleArray); // 传递一个双精度型数组
 
-        System.out.println( "\n字符型数组元素为:" );
-        printArray( charArray ); // 传递一个字符型数组
+        System.out.println("\n字符型数组元素为:");
+        printArray(charArray); // 传递一个字符型数组
 
     }
 

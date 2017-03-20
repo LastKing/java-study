@@ -1,7 +1,5 @@
 package com.base.enums;
 
-import com.sun.prism.j2d.paint.MultipleGradientPaint;
-
 /**
  * 枚举实例
  * Created by Rain on 2017/2/28.
