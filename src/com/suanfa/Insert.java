@@ -3,19 +3,16 @@ package com.suanfa;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
- * 选择算法
+ * 插入算法
  * Created by toonew on 2017/3/29.
  */
-public class select {
+public class Insert {
     public static void sort(Comparable[] a) {
         int N = a.length;
-        for (int i = 0; i < N; i++) {
-            int min = i;
-            for (int j = i + 1; j < N; j++) {
-                if (less(a[j], a[min]))
-                    min = j;
-            }
-            exch(a, i, min);
+
+        for (int i = 1; i < N; i++) {
+            for (int j = i; j > 0 && less(a[j], a[j - 1]); j--)
+                exch(a, j, j - 1);
         }
     }
 
