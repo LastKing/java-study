@@ -1,11 +1,9 @@
-package com.suanfa4.class1;
+package com.suanfa4.cla1;
 
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.Arrays;
-
-public class BinarySearch1 {
+public class BinarySearch {
 
     private static int rank(int key, int[] arr) {
         //数组必须有序
@@ -25,11 +23,11 @@ public class BinarySearch1 {
 
         int[] whiteList = {1, 2, 3, 4};
 
-        Arrays.asList(whiteList);
+//        Arrays.asList(whiteList);
         while (!StdIn.isEmpty()) {
             int key = StdIn.readInt();
             if (rank(key, whiteList) < 0)
-                StdOut.println(key);
+                StdOut.println(2);
         }
 
     }
