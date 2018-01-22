@@ -12,5 +12,6 @@ public class Test1 {
         Map map2 = new Hashtable();//HashTable线程安全，低效，不支持null
         Map map3 = new LinkedHashMap();
         Map map4 = new TreeMap();
+
     }
 }
