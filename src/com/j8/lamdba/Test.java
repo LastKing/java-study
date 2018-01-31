@@ -4,17 +4,17 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Runnable r = () -> System.out.println("hello world");
-        new Thread(r).start();
-
-
-        Runnable r2 = new Runnable() {
+        //java8之前：
+        new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println("hello world2");
+                System.out.println("hello world!");
             }
-        };
-        r2.run();
+        }).start();
+
+        //java8：
+        new Thread(() -> System.out.println("hello world")).start();
+
 
     }
 
