@@ -22,3 +22,10 @@
 1. [漫画：什么是HashMap？](https://mp.weixin.qq.com/s?__biz=MzIxNjA5MTM2MA==&mid=2652434336&idx=1&sn=c808ecd7fd01e4caa779a767d0d16eb0&chksm=8c62102fbb1599393e372a5cf462462885fd899fe21cce2e5477e262396ba712f9374bc3a7d7&scene=21#wechat_redirect)
 2. [深入HashMap上篇 （未看完）](https://www.cnblogs.com/softidea/p/7261111.html)
 3. [漫画：什么是ConcurrentHashMap？](https://mp.weixin.qq.com/s?__biz=MzIxMjE5MTE1Nw==&mid=2653192083&idx=1&sn=5c4becd5724dd72ad489b9ed466329f5&chksm=8c990d49bbee845f69345e4121888ec967df27988bc66afd984a25331d2f6464a61dc0335a54&scene=21#wechat_redirect)
+
+
+## HashTable
+实现原理：
+1. 组成结构 Entry数组 + 链表
+2. 增加synchronized将代码同步化
+3. 除非需要完全的数据一致性要求，否则尽量使用ConcurrentHashMap代替

@@ -13,7 +13,7 @@ public class Test1 {
 
         //二者存为集合锁
         Map map2 = new Hashtable();//HashTable线程安全，低效，不支持null
-        Map map5 = Collections.synchronizedMap(map);//线程安全，会固定表其他线程的一切操作
+        Map map5 = Collections.synchronizedMap(map);//线程安全，会锁定表其他线程的一切操作
 
         //集合楼上 三者的折中点
         Map map6 = new ConcurrentHashMap(); //两层hash，细化锁得层级
