@@ -13,9 +13,8 @@ public class Test1 {
     public static void main(String[] args) {
         //ArrayList是非线程安全的，效率高
         List list = new ArrayList();
-        list.add(0,"dfas");
-        System.out.println(list.size());
-        //Vector是基于线程安全的，效率低
+
+        //Vector   是synchronized实现的线程安全，效率低 （以上两者都是 数组的动态扩容实现的）
         List list2 = new Vector();
 
         //LinkedList：底层基于链表实现，链表内存是散乱的，
