@@ -4,7 +4,7 @@
 实现原理：
 1. 组成结构  Entry数组 + 链表
 2. hashcode
-    * old:  key --> int ,int % 16=index
+    * old: key --> int ,int % 16=index
     * new: key -->int , int & 1111 效率更高
 3. HashMap resize的条件 CurrentSize> Capacity * LoadFactor(default=0.75% 负载因子)
 4. HashMap在进行Resize和ReHash的过程中多线程情况下会发生链的回环，在查询时发生死循环
