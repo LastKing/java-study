@@ -21,6 +21,7 @@ java简单梗概
 
 还没有解决的问题：
 1. 参考1中的默认序列化和自定义序列化的底层调用方法
+2. 更加详尽的拓展资料[Java基础知识——序列化](http://www.hollischuang.com/archives/1158)
 
 参考：
 1. [深入分析Java的序列化与反序列化](http://www.hollischuang.com/archives/1140)
