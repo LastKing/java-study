@@ -1,5 +1,27 @@
 # HashMap学习总结
 
+一片更加详细的各种Hash算法将key转化成int的文章[HashMap详解](http://www.hollischuang.com/archives/2091)<br/>
+尚待解决的:
+1. 容量capacity 和 负载因子load factor
+1. HashMap中所有put和get方法的分析
+2. 扩容（缩放）机制的具体实现原理
+3. 1.8引入红黑树的机制，优势：
+    1. 防止在数据极限碰撞的情况，出现O(1)退化成O(n)的劣势
+    2. 将极限劣势的情况的O(n)进化成为O(logn)级别
+4. 理解位运算在HashMap中的引用，意义优化速度操作
+    1. (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+        这一句主要是 高位16bit和低位16bit异或，减少过少的位数造成的大量碰撞
+    2. 	(n - 1) & hash  计算下标，防止下标越界
+5. 为什么容量一定是2的n次方？
+6. resize原理，load factor负载因子，capacity容量问题？
+7. 红黑树的具体分析？
+
+感觉以下三篇文章能解释了很多：
+* [Java HashMap工作原理及实现](https://yikun.github.io/2015/04/01/Java-HashMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/)
+* [Java中HashMap底层实现原理(JDK1.8)源码分析](http://blog.csdn.net/tuke_tuke/article/details/51588156)
+* [Jdk1.8中的HashMap实现原理](http://blog.csdn.net/fjse51/article/details/53811465)
+
+
 ## HashMap
 实现原理：
 1. 组成结构  Entry数组 + 链表

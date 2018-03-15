@@ -21,5 +21,18 @@ public class Test1 {
         Map map3 = new LinkedHashMap();
         Map map4 = new TreeMap();
 
+        System.out.println(tableSizeFor(18));
     }
+
+    static final int tableSizeFor(int cap) {
+        int MAXIMUM_CAPACITY = 1 << 30;
+        int n = cap - 1;//0001 0001
+        n |= n >>> 1;   //0000 1000  0001 1001
+        n |= n >>> 2;   //           0000 0110  0001 1111
+        n |= n >>> 4;   //                      0000 0001 0001 1111
+        n |= n >>> 8;   //                                0001 1111
+        n |= n >>> 16;  //                                0001 1111
+        return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    }
+
 }
