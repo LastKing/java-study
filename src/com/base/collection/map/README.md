@@ -53,3 +53,15 @@
 1. 组成结构 Entry数组 + 链表
 2. 增加synchronized将代码同步化
 3. 除非需要完全的数据一致性要求，否则尽量使用ConcurrentHashMap代替
+
+## ConcurrentHashMap
+实现原理：
+也是锁的思想具体采用的是分部锁的概念，增加锁定额区域，防止大面积的锁定，增加效率。
+
+
+## LinkedHashMap
+继承自HashMap，增加一条双向链表用来记忆插入顺序，重写3个方法，在put和del时回调，另一个暂时不明具体场景。
+大致流程为HashMap，在put完成后，调用afterNodeAccess，对双向链表进行添加，删除同理。
+
+## TreeMap
+底层由红黑树完成，根据key排序，查询效率O(logn)级别。
