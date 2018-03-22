@@ -1,26 +1,26 @@
-package com.base.thread.extend.base2;
+package com.base.thread.demo.implement.base2;
 
 /**
- * 继承 线程，重写run 方法，start时创建线程，进入准备状态
- *
+ * 实现run 并且自建一个 线程执行
  * Created by toonew on 2017/1/18.
  */
-public class ThreadDemo extends Thread {
+public class RunnableTask implements Runnable {
+
     private Thread t;
     private String threadName;
 
-
-    public ThreadDemo(String name) {
-        this.threadName = name;
+    public RunnableTask(String threadName) {
+        this.threadName = threadName;
+        System.out.println("Creating " + threadName);
     }
 
     @Override
     public void run() {
-        System.out.println("Running " + threadName);
+        System.out.println("Running" + threadName);
         try {
             for (int i = 4; i > 0; i--) {
                 System.out.println("Thread: " + threadName + ", " + i);
-                // 让线程睡醒一会
+                // 让线程睡眠一会
                 Thread.sleep(50);
             }
         } catch (InterruptedException e) {
@@ -29,12 +29,12 @@ public class ThreadDemo extends Thread {
         System.out.println("Thread " + threadName + " exiting.");
     }
 
-    @Override
-    public synchronized void start() {
+    public void start() {
         System.out.println("Staring" + threadName);
         if (t == null) {
             t = new Thread(this, threadName);
             t.start();
         }
     }
+
 }

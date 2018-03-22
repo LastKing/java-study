@@ -1,12 +1,12 @@
-package com.base.thread.implement.base1;
+package com.base.thread.demo.implement.base1;
 
 /**
  * Created by toonew on 2017/2/13.
  */
-public class TestRunnable implements Runnable {
+public class RunnableTask implements Runnable {
     private String name;
 
-    public TestRunnable(String name) {
+    public RunnableTask(String name) {
         this.name = name;
     }
 

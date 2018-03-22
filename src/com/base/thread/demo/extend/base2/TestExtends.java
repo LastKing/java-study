@@ -1,4 +1,4 @@
-package com.base.thread.extend.base2;
+package com.base.thread.demo.extend.base2;
 
 /**
  * Created by Rain on 2017/2/14.
