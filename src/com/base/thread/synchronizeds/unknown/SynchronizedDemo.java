@@ -1,4 +1,4 @@
-package com.base.thread.synchronizeds;
+package com.base.thread.synchronizeds.unknown;
 
 /**
  * http://www.imooc.com/video/6818
