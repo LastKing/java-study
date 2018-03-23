@@ -1,5 +1,7 @@
 # synchronized 关键字的学习
 
+java中的synchronized也就是一种锁而已，只是java帮你完成了很多的东西，锁的获取，锁的释放都由java帮你完成，更加简单。
+
 ## synchronized 作为同步代码块 时的效果
 1. 当两个并发线程访问同一个对象object中的这个synchronized(this)同步代码块时，一个时间内只能有一个线程得到执行。
 另一个线程必须等待当前线程执行完这个代码块以后才能执行该代码块。
