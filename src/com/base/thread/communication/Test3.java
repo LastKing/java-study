@@ -3,6 +3,8 @@ package com.base.thread.communication;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * CountDownLatch 倒数统计器，
+ * 设置初始值，每次减一，到0开始
  * create by toonew on 2018/3/24
  */
 public class Test3 {

@@ -1,36 +1,38 @@
 package com.base.thread.communication;
 
 /**
+ * join 等待 A.join 中A线程完成
  * create by toonew on 2018/3/23
  */
 public class Test1 {
 
     public static void main(String[] args) {
-
         demo1();
     }
 
     private static void demo1() {
-        Thread A = new Thread(new Runnable() {
+        Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                printNumber("A");
+                printNumber("thread1");
             }
         });
-        Thread B = new Thread(new Runnable() {
+
+        Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println("B 开始等待 A");
+                System.out.println("thread2 开始等待 thread1");
                 try {
-                    A.join();
+                    thread1.join();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                printNumber("B");
+                printNumber("thread2");
             }
         });
-        A.start();
-        B.start();
+
+        thread1.start();
+        thread2.start();
     }
 
     private static void printNumber(String threadName) {
@@ -41,7 +43,7 @@ public class Test1 {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(threadName + "print:" + i);
+            System.out.println(threadName + " print:" + i);
         }
     }
 }
