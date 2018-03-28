@@ -1,8 +1,5 @@
 # 线程与执行器
 
-## Thread 和 Runnable 的关系
-基本实现和使用方式
-
 ## Executor 执行器基本api
 
 
