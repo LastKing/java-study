@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.concurrent.CyclicBarrier;
 
 /**
+ * cyclicBarrier 应该和CountDownLatch类似，都是对数据的统计，只是这个不需要countDown
+ * 每次都是await ，有一种 3个人 都发送我准备好的感觉
  * create by toonew on 2018/3/24
  */
 public class Test4 {

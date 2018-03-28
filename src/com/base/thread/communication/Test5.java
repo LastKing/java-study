@@ -5,6 +5,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 /**
+ * callable 和 futureTask的组和使用，实现了子进程可以返回参数
  * create by toonew on 2018/3/24
  */
 public class Test5 {
