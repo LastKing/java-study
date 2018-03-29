@@ -19,7 +19,7 @@ demo文件中3种线程创建的基本方式,[demo出处部分](http://www.runoo
 继承方式一种最直接的实现，在实现因为Thread本身实现了Runnable，增加了更多的方法，用来处理线程工作的周边问题，
 例如线程任务的添加，退出清理工作等。
 
-实现方式，task任务之一，最终都是thread的start启动,最终还是需要将自己扔到thread中执行。
+实现方式，task任务之一，最终都是thread的start启动,最终还是需要将自己扔到thread中执行，无返回值，但是callable有。
 
 Callable和Future，特别容易和`Excutor`搅在一起讲，但是他两组合起来也只是一种task而已，只是更加复杂和简单，嘿嘿，
 Callable相当于Runnable，也是一种task，类似，由Future将Callable转化成为普通的Runnable模式，简化线程间的通讯，
