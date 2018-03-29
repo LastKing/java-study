@@ -1,4 +1,4 @@
-package com.j8.lambda;
+package java8.lambda;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,7 +16,7 @@ public class Test2 {
         show.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Event handling without lambda expression is boring");
+                System.out.println("Event handling without java8.lambda expression is boring");
             }
         });
 

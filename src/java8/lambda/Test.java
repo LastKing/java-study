@@ -1,4 +1,4 @@
-package com.j8.lambda;
+package java8.lambda;
 
 public class Test {
 

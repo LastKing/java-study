@@ -1,4 +1,4 @@
-package com.ltx.strings;
+package base.string;
 
 /**
  * 出处： http://www.jianshu.com/p/c92578398114

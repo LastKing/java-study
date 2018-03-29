@@ -1,4 +1,4 @@
-package com.ltx.pool.ThreadPool1;
+package base.thread.pool.ThreadPool1;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;

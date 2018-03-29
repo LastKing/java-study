@@ -1,4 +1,4 @@
-package com.ltx.serialize;
+package base.serializable.unknown;
 
 import java.io.FileInputStream;
 import java.io.IOException;

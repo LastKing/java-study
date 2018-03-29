@@ -1,4 +1,4 @@
-package com.ltx.pool;
+package base.thread.pool;
 
 /**
  * 测试线程池
