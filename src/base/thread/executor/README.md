@@ -2,6 +2,7 @@
 
 问题记录：
 1. newWorkStealingPool有什么意义，ForkJoinPool好像在拆分什么东西？参考[参考](http://blog.dyngr.com/blog/2016/09/15/java-forkjoinpool-internals/)
+2. FutureTask Future RecursiveTask ForkJoinTask Future 之间的关系
 
 java5开始引入executor框架，用来处理线程的启动，调度，销毁等线程的管理。
 
