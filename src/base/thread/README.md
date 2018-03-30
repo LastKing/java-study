@@ -22,7 +22,7 @@ demo文件中3种线程创建的基本方式,[demo出处部分](http://www.runoo
 实现方式，task任务之一，最终都是thread的start启动,最终还是需要将自己扔到thread中执行，无返回值，但是callable有。
 
 Callable和Future，特别容易和`Excutor`搅在一起讲，但是他两组合起来也只是一种task而已，只是更加复杂和简单，嘿嘿，
-Callable相当于Runnable，也是一种task，类似，由Future将Callable转化成为普通的Runnable模式，简化线程间的通讯，
+Callable相当于Runnable，也是一种task，类似但是没有继承Runnable，由Future继承Runnable并将将Callable转化成为普通的Runnable模式，简化线程间的通讯，
 这个玩也估计就是和Executor配套产生的。[callable和future，作为普通task或者exector](http://blog.csdn.net/ghsau/article/details/7451464)区别参见。
 https://www.cnblogs.com/dolphin0520/p/3949310.html
 

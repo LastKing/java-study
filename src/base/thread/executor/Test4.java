@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 public class Test4 {
 
     public static void main(String[] args) throws Exception {
-
         ExecutorService executor = Executors.newWorkStealingPool();
         List<Callable<String>> callables = Arrays.asList(
                 callable("task1", 2),
