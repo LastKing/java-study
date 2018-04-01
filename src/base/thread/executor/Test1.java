@@ -3,7 +3,7 @@ package base.thread.executor;
 import java.util.concurrent.*;
 
 /**
- * 只是铺垫 看test2，和thread/demo中的call 例子，了解基本callable和future的关系，以及与Runnable的关系与区别
+ * 只是铺垫 看test2，和 /thread/demo中的call 例子，了解基本callable和future的关系，以及与Runnable的关系与区别
  * 线程池的基本套路
  * 1.生成 你需求的 线程池
  * 2.生成需要执行的task ，可是Runnable或者Callable
@@ -13,7 +13,7 @@ import java.util.concurrent.*;
  */
 public class Test1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //官方给定几种基本线程池
         ExecutorService executor = Executors.newSingleThreadExecutor();
 //        ExecutorService executor = Executors.newCachedThreadPool();      //可缓存线程池，
@@ -37,26 +37,29 @@ public class Test1 {
 //        executor.invokeAll();                 //submit的批量版本
 
         //submit 几种，注意这里的Callable不是runnable，第二个方法的意思是runnable运行成功的化，添加一个固定的返回值
-//        executor.submit(Callable < T > task);
-//        executor.submit(Runnable task, T result);
-//        executor.submit(Runnable task);
+//        executor.submit(Callable <T> task);           //有返回值
+//        executor.submit(Runnable task, T result);     //task无返回值，result为成功时的固定返回值
+//        executor.submit(Runnable task);               //无返回值
 
-        executor.submit(() -> {
+        Future<String> future = executor.submit(() -> {
             String threadName = Thread.currentThread().getName();
             System.out.println("hello " + threadName);
-        });
+        }, "String");
 
+        System.out.println("test " + future.get() + " test");
 
         try {
             System.out.println("attempt to shutdown executor");
-            executor.shutdown();
+            //关闭策略
+            executor.shutdown();            //关闭，拒绝新请求的加入，给已经在运行的任务发等待结束信号，并等待老任务结束
+//            executor.shutdownNow();       //立刻关闭，拒绝新请求的加入，立即终止老任务
             executor.awaitTermination(5, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            if (!executor.isTerminated()) {
-                System.out.println("cancel non-finished  tasks ");
-            }
+            if (!executor.isTerminated())
+                System.out.println("cancel non-finished  tasks");
+
             executor.shutdown();
             System.out.println("shutdown finished");
         }

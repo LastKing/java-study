@@ -25,7 +25,7 @@ Exectors提供一系列工厂方法用于创建各种线程池：
 123底层实现都是通过调用`ThreadPoolExecutor`来完成对象的生成，4是由`ScheduledThreadPoolExecutor`完成对象生成,5由`ForkJoinPool`完成
 
 ThreadPoolExecutor这个api可以用来自定义生成线程池，
-`public ThreadPoolExecutor(  int corePoolSize,int maximumPoolSize,long keepAliveTime,TimeUnit unit,BlockingQueue<Runnable> workQueue,....)`
+`public ThreadPoolExecutor(int corePoolSize,int maximumPoolSize,long keepAliveTime,TimeUnit unit,BlockingQueue<Runnable> workQueue,....)`
 * corePoolSize ：    保存的核心线程数，包括空闲线程
 * maximumPoolSize ： 池中允许的最大线程数
 * keepAliveTime ：   线程池中的空闲线程所能持续的最长存活时间
