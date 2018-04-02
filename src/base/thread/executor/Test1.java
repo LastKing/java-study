@@ -16,7 +16,7 @@ public class Test1 {
     public static void main(String[] args) throws Exception {
         //官方给定几种基本线程池
         ExecutorService executor = Executors.newSingleThreadExecutor();
-//        ExecutorService executor = Executors.newCachedThreadPool();      //可缓存线程池，
+//        ExecutorService executor = Executors.newCachedThreadPool();      //可缓存线程池
 //        ExecutorService executor = Executors.newFixedThreadPool(5);      //定长线程池
 //        ExecutorService executor = Executors.newScheduledThreadPool(5);  //创建一个定期执行task的线程池（返回一个ScheduledExecutorService）
 //        ExecutorService executor = Executors.newWorkStealingPool();      //创建一个xxxx的线程池(1.8新增，通过ForkJoinPool判断)
@@ -35,6 +35,7 @@ public class Test1 {
 //        executor.execute(() -> {});           //无返回值，无法确认知否成功完成
 //        executor.submit(() -> {});            //返回一个future，用来判断任务是否成功
 //        executor.invokeAll();                 //submit的批量版本
+//        executor.invokeAny();                 //submit的批量版本
 
         //submit 几种，注意这里的Callable不是runnable，第二个方法的意思是runnable运行成功的化，添加一个固定的返回值
 //        executor.submit(Callable <T> task);           //有返回值

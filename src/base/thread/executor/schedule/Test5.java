@@ -1,4 +1,4 @@
-package base.thread.executor;
+package base.thread.executor.schedule;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -6,6 +6,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * schedule 设置延迟值
+ * https://zhuanlan.zhihu.com/p/33266682?utm_source=qq&utm_medium=social
  * create by toonew on 2018/2/10
  */
 public class Test5 {

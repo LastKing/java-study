@@ -3,6 +3,8 @@
 问题记录：
 1. newWorkStealingPool有什么意义，ForkJoinPool好像在拆分什么东西？参考[参考](http://blog.dyngr.com/blog/2016/09/15/java-forkjoinpool-internals/)
 2. FutureTask Future RecursiveTask ForkJoinTask Future 之间的关系
+3. ScheduleThreadPool 实际应用也没有搞定，只是看了下基本的案例
+4. 还有这3片文章的案例分析 https://zhuanlan.zhihu.com/p/33266682?utm_source=qq&utm_medium=social
 
 java5开始引入executor框架，用来处理线程的启动，调度，销毁等线程的管理。
 
@@ -23,6 +25,8 @@ Exectors提供一系列工厂方法用于创建各种线程池：
 
 以上1 2 3 5都返回一个Exexcutor，4返回了一个ScheduledExecutorService <br/>
 123底层实现都是通过调用`ThreadPoolExecutor`来完成对象的生成，4是由`ScheduledThreadPoolExecutor`完成对象生成,5由`ForkJoinPool`完成
+
+注意以上 123遵循后面的规范，ScheduleThreadPool和WorkStealingPool都不遵循，它们采用不同的底层实现。
 
 ThreadPoolExecutor这个api可以用来自定义生成线程池，
 `public ThreadPoolExecutor(int corePoolSize,int maximumPoolSize,long keepAliveTime,TimeUnit unit,BlockingQueue<Runnable> workQueue,....)`
@@ -51,7 +55,7 @@ pool中对通过execute/submit 新增的task处理方式：
 这一篇应该是模仿了[参考1](https://blog.csdn.net/kouwoo/article/details/48788867)
 自定义线程池[参考2](https://blog.csdn.net/ns_code/article/details/17465497)，
 拒绝策略[参考3](https://blog.csdn.net/chao_19/article/details/74055255),[参考4](https://blog.csdn.net/chaofanwei2/article/details/51393794)
-
+线程池[single,fix,cache](https://www.cnblogs.com/study-everyday/archive/2017/04/20/6737428.html)
 
 ## Executor 执行器基本api
 
