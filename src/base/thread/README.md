@@ -29,7 +29,10 @@ https://www.cnblogs.com/dolphin0520/p/3949310.html
 
 ### 为什么线程只允许使用start()启动线程？
 在分析分析代码，发现直接调用run，只是相当于调用了一个方法，而已并没有将run里面的任务，丢入线程组中，
-在start方法内有一个`group.add(this);`，这个ThreadGroup是将任务真正多线程执行的地方（具体的分析后面补上）
+在start方法内有一个`group.add(this);`，这个ThreadGroup是将任务扔到多线程组中，start中调用start0()方法，
+而`private native void start0();`则是一个调用原生方法的函数，直接调用底层的c方法，根据不同的系统将java多线程影射到系统原生线程上。
+
+
 
 
 ## 各种同步与锁的学习
