@@ -5,9 +5,10 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * FutureTask 实现了Runnable&Future，通过run调用call，增加状态机制
+ *
  * 这是CallTask和future的最基本的例子
- * 只是简单的
- * 将task丢入future，用于管理状态和获取结果
+ * 将callTask丢入future，用于管理状态和获取结果
  * future丢入thread中实际运行
  * future.get同步获取结果，结果会阻塞式获取
  * 关于executor和future的连用，请去executor去看
@@ -27,7 +28,6 @@ public class Test {
 
         Integer result = ft.get();                              //同步阻塞
         System.out.println("a 子线程的返回值：" + result);
-
 
         Integer result2 = ft2.get(5, TimeUnit.SECONDS); //同步阻塞 ，别理解错了，这里是timeout超时，意思是最长等待时间，不是等5秒再get。。
         System.out.println("b 子线程的返回值：" + result2);

@@ -12,7 +12,7 @@ Executor框架包括：`线程池`，`Executors`，`Executor`，`ExecutorService
 `CompletionService`，`Future`，`Callable`等。
 
 ## Executors 关系网络
-ExecutorService继承了Excutor接口（包含execute），增加了shutdown平滑关闭，拒绝新请求，等待旧请求完成。
+ExecutorService继承了Executor接口（包含execute），增加了shutdown平滑关闭，拒绝新请求，等待旧请求完成。
 
 ExecutorService生命周期：`运行`、`关闭`、`终止`
 
@@ -26,7 +26,7 @@ Exectors提供一系列工厂方法用于创建各种线程池：
 以上1 2 3 5都返回一个Exexcutor，4返回了一个ScheduledExecutorService <br/>
 123底层实现都是通过调用`ThreadPoolExecutor`来完成对象的生成，4是由`ScheduledThreadPoolExecutor`完成对象生成,5由`ForkJoinPool`完成
 
-注意以上 123遵循后面的规范，ScheduleThreadPool和WorkStealingPool都不遵循，它们采用不同的底层实现。
+注意以上 123遵循后面的规范，ScheduleThreadPool和WorkStealingPool都不遵循,不知道它们怎么转到Thread.start中的，它们采用不同的底层实现。
 
 ThreadPoolExecutor这个api可以用来自定义生成线程池，
 `public ThreadPoolExecutor(int corePoolSize,int maximumPoolSize,long keepAliveTime,TimeUnit unit,BlockingQueue<Runnable> workQueue,....)`

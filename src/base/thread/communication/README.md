@@ -2,11 +2,11 @@
 
 [线程通信与进程通信的区别](https://www.cnblogs.com/xh0102/p/5710074.html)
 通过这篇文章的学习以及一些基本线程通信[demo分析](http://www.importnew.com/26850.html)
-，就证明了一件事情，多线程之间和进程通信并不完全一直，多线程之间关注的更多的是
+，就证明了一件事情，多线程之间和进程通信并不完全一致，多线程之间关注的更多的是:
+
 * 锁                    synchronized
 * 信号机制(signal)      volatile  wait和notify（好像并不准确）
 * 信号量机制(Semaphore) Semaphore CountDownLatch  CyclicBarrier
-*
 * sleep wait yield join 几者之间的关系倒是可以通过下图说清楚，但是这个算线程通信的哪一块啊。
 
 
@@ -28,6 +28,7 @@ Thread state 生命周期图片 [出处](https://www.zhihu.com/question/23328075
 * 死亡状态:一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。
 
 ## sleep、yield 、join、wait/notify
+
 [参考](https://www.cnblogs.com/huajiezh/p/5868681.html)
 sleep 不会释放锁，为静态方法可以在任何地方被调用,只会锁定当前线程
 
@@ -37,16 +38,16 @@ yield 暂停，只是将当前线程重新回到可执行状态
 
 join 等待改线程终止
 
-
 ## Semaphore 、CountDownLatch 和 CyclicBarrier
+
 以下3者对比 看这篇[文章](https://blog.csdn.net/vernonzheng/article/details/8280032)
 
 Semaphore信号量机制，acquire获取许可，release释放
 
 CountDownLatch 设置初始值，每次减一，到0开始，简易demo看Test3
 await开始等待，countDown不断计数,达到条件
+
 1. [基本介绍和场景分析](http://www.importnew.com/15731.html)
 2. [1.8源码分析](https://www.cnblogs.com/leesf456/p/5406191.html)
 
 CyclicBarrier 到达某个屏障，等待一起执行，简易demo看Test4
-
