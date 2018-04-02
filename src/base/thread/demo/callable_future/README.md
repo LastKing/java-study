@@ -10,7 +10,8 @@ Future接口规定了一堆对线程状态的管理方法，单纯这两者无�
 由FutureTask继承Runnable并将Callable转化成为普通的Runnable模式，实现线程的状态管理，并返回值的。
 可以单独在`Thread`中使用
 
-在`Exector`中使用时将Callable直接submit给executor，返回Future管理状态和获取值，（暂时只确定ThreadPoolExecutor线程池）
+在`Exector`中使用时将Callable直接submit给executor，通过submit将Callable扔到Runnable中，
+并返回future,返回Future管理状态和获取值，（暂时只确定ThreadPoolExecutor线程池,参见`AbstractExecutorService.submitsubmit(Callable<T> task)`）
 
 ## FutureTask实现原理分析
 
