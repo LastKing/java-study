@@ -1,7 +1,7 @@
-package com.sesignpattern.daili.jingtai;
+package com.designpattern.daili.jingtai;
 
-import com.sesignpattern.daili.RealSubject;
-import com.sesignpattern.daili.Subject;
+import com.designpattern.daili.RealSubject;
+import com.designpattern.daili.Subject;
 
 /**
  * @author toonew on 2018/6/20

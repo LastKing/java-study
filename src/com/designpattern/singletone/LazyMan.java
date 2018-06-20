@@ -1,4 +1,4 @@
-package com.sesignpattern.singletone;
+package com.designpattern.singletone;
 
 /**
  * 懒汉，非线程安全

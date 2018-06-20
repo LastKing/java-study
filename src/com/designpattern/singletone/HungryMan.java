@@ -1,4 +1,4 @@
-package com.sesignpattern.singletone;
+package com.designpattern.singletone;
 
 /**
  * 饿汉模式 线程安全

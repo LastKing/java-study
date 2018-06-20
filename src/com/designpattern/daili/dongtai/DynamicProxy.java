@@ -1,4 +1,4 @@
-package com.sesignpattern.daili.dongtai;
+package com.designpattern.daili.dongtai;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -16,7 +16,7 @@ public class DynamicProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("日志开始");
-        
+
         Object result = method.invoke(object, args);
 
         System.out.println("日志结束");

@@ -1,6 +1,6 @@
-package com.sesignpattern.daili.jingtai;
+package com.designpattern.daili.jingtai;
 
-import com.sesignpattern.daili.Subject;
+import com.designpattern.daili.Subject;
 
 /**
  * 这是个最简单的代理，试着增加一些功能

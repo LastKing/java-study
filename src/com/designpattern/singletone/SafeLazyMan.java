@@ -1,4 +1,4 @@
-package com.sesignpattern.singletone;
+package com.designpattern.singletone;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

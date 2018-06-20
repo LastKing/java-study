@@ -1,4 +1,4 @@
-package com.sesignpattern.daili;
+package com.designpattern.daili;
 
 /**
  * @author toonew on 2018/6/20

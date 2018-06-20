@@ -1,7 +1,7 @@
-package com.sesignpattern.daili.dongtai;
+package com.designpattern.daili.dongtai;
 
-import com.sesignpattern.daili.RealSubject;
-import com.sesignpattern.daili.Subject;
+import com.designpattern.daili.RealSubject;
+import com.designpattern.daili.Subject;
 
 import java.lang.reflect.Proxy;
 
