@@ -1,11 +1,9 @@
 package leecode.chain;
 
 /**
- * 删除链表的倒数第N个节点
- *
  * @author toonew on 2018/7/12
  */
-public class Test2 {
+public class Test3 {
 
     public static void main(String[] args) {
 
@@ -18,30 +16,29 @@ public class Test2 {
         node1.next = node2;
         node2.next = node3;
 
-        Test2 test = new Test2();
-        test.removeNthFromEnd(node1, 4);
+        Test3 test = new Test3();
+        node1 = test.reverseList(node1);
 
         System.out.println(node1);
     }
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode preNode = head;
-        ListNode curNode = head;
-
-        for (int i = 0; i < n; i++) {
-            curNode = curNode.next;
-        }
-        if (curNode == null) {
-            return preNode.next;
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
         }
 
-        while (curNode.next != null) {
-            preNode = preNode.next;
-            curNode = curNode.next;
-        }
-        preNode.next = preNode.next.next;
+        ListNode pre = null;
+        ListNode next = null;
 
-        return head;
+
+        while (head != null) {
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+
+        return pre;
     }
 
     private static class ListNode {
