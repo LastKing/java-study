@@ -1,4 +1,4 @@
-package leecode.chain;
+package leetcode.chain;
 
 /**
  * @author toonew on 2018/7/12

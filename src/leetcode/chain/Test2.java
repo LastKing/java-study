@@ -1,4 +1,4 @@
-package leecode.chain;
+package leetcode.chain;
 
 /**
  * 删除链表的倒数第N个节点

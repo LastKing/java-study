@@ -1,4 +1,4 @@
-package leecode.tree;
+package leetcode.tree;
 
 /**
  * @author toonew on 2018/7/20

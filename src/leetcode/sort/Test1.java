@@ -1,4 +1,4 @@
-package leecode.sort;
+package leetcode.sort;
 
 /**
  * 合并两个有序数组

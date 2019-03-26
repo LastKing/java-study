@@ -1,4 +1,4 @@
-package leecode.array;
+package leetcode.array;
 
 /**
  * 投资最佳算法2

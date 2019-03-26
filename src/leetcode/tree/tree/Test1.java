@@ -1,6 +1,6 @@
-package leecode.tree.tree;
+package leetcode.tree.tree;
 
-import leecode.tree.TreeNode;
+import leetcode.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

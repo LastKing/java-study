@@ -1,4 +1,4 @@
-package leecode.array;
+package leetcode.array;
 
 /**
  * @author toonew on 2018/6/22

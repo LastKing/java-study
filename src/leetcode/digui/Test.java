@@ -1,4 +1,4 @@
-package leecode.digui;
+package leetcode.digui;
 
 /**
  * @author toonew on 2018/7/20
