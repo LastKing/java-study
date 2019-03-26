@@ -1,4 +1,4 @@
-package java8.lambda;
+package base.lambda;
 
 public class Test {
 
@@ -14,7 +14,6 @@ public class Test {
 
         //java8：
         new Thread(() -> System.out.println("hello world")).start();
-
 
     }
 

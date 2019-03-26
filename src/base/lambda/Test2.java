@@ -1,4 +1,4 @@
-package java8.lambda;
+package base.lambda;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
