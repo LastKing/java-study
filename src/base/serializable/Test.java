@@ -15,16 +15,14 @@ public class Test implements Serializable {
 
     public static void main(String[] args) throws Exception {
         //初始时staticVar为5
-        ObjectOutputStream out = new ObjectOutputStream(
-                new FileOutputStream("result.obj"));
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("result.obj"));
         out.writeObject(new Test());
         out.close();
 
         //序列化后修改为10
         Test.staticVar = 10;
 
-        ObjectInputStream oin = new ObjectInputStream(new FileInputStream(
-                "result.obj"));
+        ObjectInputStream oin = new ObjectInputStream(new FileInputStream("result.obj"));
         Test t = (Test) oin.readObject();
         oin.close();
 
